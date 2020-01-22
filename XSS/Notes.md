@@ -10,3 +10,10 @@ Putting code into an input field such that the website executes our code.
     * On a profile page for user @max, what happens if you change the url from `localhost:3000/user/max` to `localhost:3000/user/macks`?
     * Maybe it responds with `No User Found: Macks` => It is executing some code, a search through the user base.
       * ex: Rather than the above, instead `localhost:3000/user/<script>alert("aloha")</script>`
+
+* Never put untrusted data...
+  * Directly in a script => `<script> <%- userData %> </script>`
+  * In HTML comments => `<!--- <%- userData %> --->`
+  * In an attribute name => `<iframe <%- userData %>="myValue" />`
+  * In a tag name => `<<%- userData %> class="myElement">`
+  * Directly in a style block => `<style> <%- userData %> </style>`
