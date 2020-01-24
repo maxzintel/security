@@ -71,4 +71,15 @@ Putting code into an input field such that the website executes our code.
       Content-Security-Policy: script-src 'sha256-qzn...asdfasdf='
       ```
       * Script is permitted via the sha tag. Generate via browser itself.
+  * Popular CSP: `HelmetJS`.
+    * Middleware for Connect. Will work with Express.
+    * Note: anything with `app.use` is generally middleware.
+
+* When inspecting sites:
+  * View => Source is showing you what came over the wire. Dev Tools are trying to render things in a more readable way.
+
+* Mitigating Malicious Attachments:
+  * Be restrictive about file types that can be uploaded.
+  * For images, compress them. Anything that compresses an image will drop non-visible data.
+  * Before adding new attachment types, research! Acrobat PDF's can execute JS!!
 
