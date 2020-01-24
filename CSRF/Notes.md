@@ -52,6 +52,7 @@
 * Install CSURF.
   * Token generation and verification.
   * Follow the docs for setup, obviously.
+* For single page applications/apps, store the CSRF token in memory.
 
 
 
